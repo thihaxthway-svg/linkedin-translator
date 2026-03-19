@@ -43,7 +43,7 @@ export default function App() {
       const data = await response.json();
 
       if (data.error) {
-        setTranslation("Something went wrong. Even LinkedIn can't spin this one.");
+        setTranslation(data.error);
       } else {
         setTranslation(data.translation);
       }
